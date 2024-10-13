@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="IDESIA.css">
+    <title>IDESIA LIPA</title>
+    
+
+
+</head>
+<body>
+    <header class="class="flex justify-between items-center p-6>
+    <div class="header">
+            <h3>IDESIA</h3> <br> <br> <br> <br>
+        <div class="top-nav">
+            <div class="title">
+                <img class="title-img" src="C:\Users\mark justin\Pictures\Screenshots\Screenshot 2024-10-13 081546.png" alt="Title Image">
+            </div>
+            <nav class="schedule">
+                <a href=http://localhost:3000/PHP/login.php>Login</a>
+            </nav>
+            <div class="schedule">
+                <a href=http://localhost:3000/IDESIA/HTML/Schedule.php>Schedule A Tripping
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+    function checkRegistration() {
+        const email = prompt("Please enter your email:");
+
+        if (email) {
+            // AJAX request to check registration
+            fetch('sendemail/PHP/check_registration.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({
+                    'email': email
+                })
+            })
+            .then(response => {
+                // Check if the response is okay
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json(); // Parse JSON response
+            })
+            .then(data => {
+                // Handle the registration response
+                if (data.registered) {
+                    window.location.href = 'submitReq.html';
+                } else {
+                    alert(data.error || "You need to register first.");
+                    window.location.href = 'register.html';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("An error occurred while checking registration.");
+            });
+
+        }
+    }
+</script>
+    
+
+    <nav class="main-nav">
+        <a href="#about">About</a>
+        <a href="#location">Location</a>
+        <a href="#landscape">Landscape and Amenities</a>
+        <a href="#floor-plan">Floor Plan and Specification</a>
+        <a href="#contact-us">Contact Us</a>
+    </nav>
+    <div class="image-container">
+        <img src="C:\Users\mark justin\Desktop\Thesis\Entrance gate.jpg" alt="Sample Image">
+    </div>
+
+
+    <section id="about" class="section-center">
+        <h1>IDESIA LIPA</h1>
+        <p>A marvelous collaboration from Filipino and Japanese designers, this 11.37-hectare development in the bustling city of Lipa, <br>
+            Batangas offers a community that thrives in safety, security, and accessibility. It is a wonderfully planned architectural feat, <br>
+            where Filipinos can indulge in the ideal way of living.</p>
+    </section>
+
+
+    <section id="gallery1" class="gallery1">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\THE PAVILION.jpg" alt="Gallery Image 1" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="c:\Users\mark justin\Desktop\Thesis\Idesiapics\GARDEN.jpg" alt="Gallery Image 2" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\AERIAL VIEW.jpg" alt="Gallery Image 3" style="width:100%">
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section id="location">
+        <h1>Location</h1>
+        <div class="location-grid">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2789.4554494904273!2d121.16489835196349!3d13.976725280645871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd6d001fbbf177%3A0x27a4f868d628dac2!2sIdesia%20Lipa%20Residential%20and%20Commercial%20Property!5e0!3m2!1sen!2sph!4v1719476644830!5m2!1sen!2sph" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="location-details">
+                <div class="image-grid">
+                    <img src="C:\Users\mark justin\Desktop\Thesis\1.jpg" alt="Image 1">
+                    <img src="C:\Users\mark justin\Desktop\Thesis\2.jpg" alt="Image 2">
+                    <img src="C:\Users\mark justin\Desktop\Thesis\3.jpg" alt="Image 3">
+                    <img src="C:\Users\mark justin\Desktop\Thesis\4.jpg" alt="Image 4">
+                    <img src="C:\Users\mark justin\Desktop\Thesis\5.jpg" alt="Image 5">
+                    <img src="C:\Users\mark justin\Desktop\Thesis\6.jpg" alt="Image 6">
+                    <img src="C:\Users\mark justin\Desktop\Thesis\7.jpg" alt="Image 7">
+                </div>
+                <div class="details">
+                    <h2>Location Details</h2>
+                    <p>Around Idesia Lipa, there are lush green parks where you can enjoy nature, <br>
+                        large shopping facilities that support your daily life, and educational facilities <br>
+                        that are great for raising children.</p> <br><br>
+                    <p>It only takes 10 minutes by car to reach SLEX (Balete Exit) from Idesia Lipa, <br>
+                        and about 1 hour from Balete to Metro Manila (Alabang). In addition, <br>
+                        the construction of a new express railway track next to the project has dramatically <br>
+                        improved access to the center of Lipa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="landscape" class="landscape">
+        <h1>Landscape and Amenities</h1>
+        <p>Indulging in moments of serenity, revitalizing your body & mind, and forging relationships with your loved ones are part of the ideal way of living. <br>
+            That's why at Idesia Lipa, we make sure you are surrounded by spaces for wellness, recreational bonding activities, and the occasional peace & quiet, <br>
+            all while staying connected both offline & online. At Idesia Lipa, we make sure you can get more out of life</p>
+        <div class="location-details">
+            <section id="gallery" class="gallery">
+                <div class="gallery-item">
+                    <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\AMPHITHEATER.jpg" alt="Gallery Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\LAGOON.jpg" alt="Gallery Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\POOL AERIAL.jpg" alt="Gallery Image 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\COURT.jpg" alt="Gallery Image 4">
+                </div>
+            </section>
+            <div class="details">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="floor-plan">
+        <h1>Floor Plans & Specifications</h1>
+        <div class="floor-plan-grid">
+            <!-- Model ARIA  -->
+            <div class="model-container">
+                <div class="slideshow-description">
+                    <div class="slideshow-container" id="gaia-slideshow1">
+                        <div class="gaiaSlides1 slides">
+                            <div class="numbertext">1 / 5</div>
+                            <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\Aria\2.jpg" style="width:100%">
+                        </div>
+                        <div class="gaiaSlides1 slides">
+                            <div class="numbertext">2 / 5</div>
+                            <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\Aria\7.jpg" style="width:100%">
+                        </div>
+                        <div class="gaiaSlides1 slides">
+                            <div class="numbertext">3 / 5</div>
+                            <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\Aria\16.jpg" style="width:100%">
+                        </div>
+                        <div class="gaiaSlides1 slides">
+                            <div class="numbertext">4 / 5</div>
+                            <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\Aria\19.jpg" style="width:100%">
+                        </div>
+                        <div class="gaiaSlides1 slides">
+                            <div class="numbertext">5 / 5</div>
+                            <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\Aria\11.jpg" style="width:100%">
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1, 'gaiaSlides1')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'gaiaSlides1')">❯</a>                        
+                    </div>
+                </div>
+                <div id="gaia-property" class="property-details">
+                    <div class="column">
+                        <h3>Lot Area</h3>
+                        <p>90 sqm End Unit / 60 sqm Reg Unit</p>
+                        <h3>Floor Area</h3>
+                        <p>42 sqm</p>
+                    </div>
+                    <div class="column">
+                        <h3>Amenities</h3>
+                        <ul>
+                            <li>Provision for Living</li>
+                            <li>Dining</li>
+                            <li>Kitchen</li>
+                            <li>Maters Bedroom & Bedroom</li>
+                            <li>Toilet & Bath</li>
+                            <li>Service Area</li>
+                            <li>Proposed Carport</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Model TALIA -->
+            <div class="model-container">
+                <div class="slideshow-description">
+                    <div class="slideshow-container" id="gaia-slideshow2">
+                        <div class="gaiaSlides2 slides">
+                            <div class="numbertext">1 / 5</div>
+                            <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\Talia\2.jpg" style="width:100%">
+                        </div>
+                        <div class="gaiaSlides2 slides">
+                            <div class="numbertext">2 / 5</div>
+                            <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\Talia\4.jpg" style="width:100%">
+                        </div>
+                        <div class="gaiaSlides2 slides">
+                            <div class="numbertext">3 / 5</div>
+                            <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\Talia\1 (1).jpg" style="width:100%">
+                        </div>
+                        <div class="gaiaSlides2 slides">
+                            <div class="numbertext">4 / 5</div>
+                            <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\Talia\23.jpg" style="width:100%">
+                        </div>
+                        <div class="gaiaSlides2 slides">
+                            <div class="numbertext">5 / 5</div>
+                            <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\Talia\29.jpg" style="width:100%">
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1, 'gaiaSlides1')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'gaiaSlides1')">❯</a>                        
+                    </div>
+                </div>
+                <div id="gaia-property2" class="property-details">
+                    <div class="column">
+                        <h3>Lot Area</h3>
+                        <p>80 sqm</p>
+                        <h3>Floor Area</h3>
+                        <p>52.25 sqm</p>
+                    </div>
+                    <div class="column">
+                        <h3>Amenities</h3>
+                        <ul>
+                            <li>Living</li>
+                            <li>Dining</li>
+                            <li>Kitchen</li>
+                            <li>Maters Bedroom & Bedroom</li>
+                            <li>Toilet & Bath</li>
+                            <li>Service Area</li>
+                            <li>Proposed Carport</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Model GAIA  -->
+            <div class="model-container">
+                <div class="slideshow-description">
+                    <div class="slideshow-container" id="gaia-slideshow3">
+                        <div class="gaiaSlides3 slides">
+                            <div class="numbertext">1 / 5</div>
+                            <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\Gaia\32.jpg" style="width:100%">
+                        </div>
+                        <div class="gaiaSlides3 slides">
+                            <div class="numbertext">2 / 5</div>
+                            <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\Gaia\15.jpg" style="width:100%">
+                        </div>
+                        <div class="gaiaSlides3 slides">
+                            <div class="numbertext">3 / 5</div>
+                            <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\Gaia\20.jpg" style="width:100%">
+                        </div>
+                        <div class="gaiaSlides3 slides">
+                            <div class="numbertext">4 / 5</div>
+                            <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\Gaia\27.jpg" style="width:100%">
+                        </div>
+                        <div class="gaiaSlides3 slides">
+                            <div class="numbertext">5 / 5</div>
+                            <img src="C:\Users\mark justin\Desktop\Thesis\Idesiapics\Gaia\28.jpg" style="width:100%">
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1, 'gaiaSlides1')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'gaiaSlides1')">❯</a>
+                    </div>
+                </div>
+                <div id="gaia-property3" class="property-details">
+                    <div class="column">
+                        <h3>Lot Area</h3>
+                        <p>Insert lot area details here.</p>
+                        <h3>Floor Area</h3>
+                        <p>Insert floor area details here.</p>
+                    </div>
+                    <div class="column">
+                        <h3>Amenities</h3>
+                        <ul>
+                            <li>Living</li>
+                            <li>Dining</li>
+                            <li>Kitchen</li>
+                            <li>Maters Bedroom & Bedroom</li>
+                            <li>Toilet & Bath</li>
+                            <li>Service Area</li>
+                            <li>Proposed Carport</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="centered">
+            <a href="sampleComputation.html" class="sample-button" target="">Sample Computation</a>
+        </div>
+    </section>
+    <br><br><br><br><br><br><br> <br> <br><br>
+
+    <section class="contact" id="contact-us">
+        <div class="contact-us">
+            <h3>Contact Us</h3>
+            <p>Tel: <br>
+            Phone: <br>
+            Email:
+            </p>
+        </div>
+        <div class="follow-us">
+            <h3>Follow Us</h3>
+            <p><a href="">Facebook</a> <br>
+                <a href="">Twitter</a> <br>
+                <a href="">Instagram</a></p>
+        </div>
+    </section>
+    
+    
+    <script>
+       document.addEventListener("DOMContentLoaded", function() {
+    var slideIndexGAIA1 = 1;
+    var slideIndexGAIA2 = 1;
+    var slideIndexGAIA3 = 1;
+
+    function showSlides(slideIndex, slidesClass) {
+        var i;
+        var slides = document.getElementsByClassName(slidesClass);
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        if (slideIndex < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
+
+    showSlides(slideIndexGAIA1, 'gaiaSlides1');
+    showSlides(slideIndexGAIA2, 'gaiaSlides2');
+    showSlides(slideIndexGAIA3, 'gaiaSlides3');
+
+    function plusSlides(n, slidesClass) {
+        if (slidesClass === 'gaiaSlides1') {
+            slideIndexGAIA1 += n;
+            showSlides(slideIndexGAIA1, slidesClass);
+        } else if (slidesClass === 'gaiaSlides2') {
+            slideIndexGAIA2 += n;
+            showSlides(slideIndexGAIA2, slidesClass);
+        } else if (slidesClass === 'gaiaSlides3') {
+            slideIndexGAIA3 += n;
+            showSlides(slideIndexGAIA3, slidesClass);
+        }
+    }
+
+    document.querySelector('#gaia-slideshow1 .prev').addEventListener('click', function() {
+        plusSlides(-1, 'gaiaSlides1');
+    });
+    document.querySelector('#gaia-slideshow1 .next').addEventListener('click', function() {
+        plusSlides(1, 'gaiaSlides1');
+    });
+
+    document.querySelector('#gaia-slideshow2 .prev').addEventListener('click', function() {
+        plusSlides(-1, 'gaiaSlides2');
+    });
+    document.querySelector('#gaia-slideshow2 .next').addEventListener('click', function() {
+        plusSlides(1, 'gaiaSlides2');
+    });
+
+    document.querySelector('#gaia-slideshow3 .prev').addEventListener('click', function() {
+        plusSlides(-1, 'gaiaSlides3');
+    });
+    document.querySelector('#gaia-slideshow3 .next').addEventListener('click', function() {
+        plusSlides(1, 'gaiaSlides3');
+    });
+});
+
+    </script>
+
+    <script>
+       let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000); 
+        }
+
+
+    </script>
+</body>
+</html>
+

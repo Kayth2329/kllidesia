@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Requirements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #a47551;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 800px;
+            background-color: #fff8dc;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 120px auto 30px;
+            text-align: center;
+            font-size: 20px;
+        }
+        section {
+            flex: 1; /* Makes the section take up available space */
+            padding: 2em;
+            margin: 1em auto;
+            max-width: 800px;
+            background-color: #fff8dc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 120px;
+        }
+        .footer {
+            background-color: #a47551;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 16px;
+        }
+        h1, h2, h3 {
+            color: #8B4513;
+            text-align: center;
+        }
+        h2 {
+            font-size: 28px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 24px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 40px;
+            text-align: left;
+            margin: 0 auto;
+        }
+        li {
+            margin-bottom: 10px;
+            color: black;
+        }
+        form label {
+            color: black;
+            font-size: 16px;
+        }
+        form input[type="file"] {
+            margin-bottom: 10px;
+        }
+        form input[type="submit"] {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        form input[type="submit"]:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>List of Requirements</h1>
+    </div>
+
+    <section id="reservation-requirements">
+        <h2>Reservation Requirements</h2>
+        <ul>
+            <li>Purchase Application Form</li>
+            <li>Proof of Identification</li>
+            <li>Notarized/Consularized Special Power of Attorney</li>
+            <li>Mortgage Redemption Insurance Form and MRI Undertaking Form</li>
+            <li>Duly Signed Undertaking with attached signed checklist of Requirements</li>
+        </ul>
+
+        <h3>Downloadable Forms</h3>
+        <ul>
+            <li><a href="path-to-form1.pdf" download>Purchase Application Form</a></li>
+            <li><a href="path-to-form2.pdf" download>Mortgage Redemption Insurance Form</a></li>
+            <li><a href="path-to-checklist.pdf" download>Checklist of Requirements</a></li>
+        </ul>
+
+        <h3>Upload Required Documents</h3>
+        <form action="upload-handler.php" method="post" enctype="multipart/form-data">
+            <label for="file1">Upload Proof of Identification:</label>
+            <input type="file" id="file1" name="file1"><br><br>
+
+            <label for="file2">Upload Notarized Special Power of Attorney:</label>
+            <input type="file" id="file2" name="file2"><br><br>
+
+            <label for="file3">Upload MRI Undertaking Form:</label>
+            <input type="file" id="file3" name="file3"><br><br>
+
+            <label for="file4">Upload Signed Undertaking:</label>
+            <input type="file" id="file4" name="file4"><br><br>
+
+            <label for="file5">Upload Checklist with Signed Documents:</label>
+            <input type="file" id="file5" name="file5"><br><br>
+
+            <label for="file6">Upload Additional Documents:</label>
+            <input type="file" id="file6" name="file6"><br><br>
+
+            <input type="submit" value="Upload Files">
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Your Company Name</p>
+    </footer>
+
+</body>
+</html>

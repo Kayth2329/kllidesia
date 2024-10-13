@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Requirements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc; 
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #a47551; 
+            color: white;
+            text-align: center;
+            padding: 0px 0; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            font-size: 24px; 
+        }
+
+        .container {
+            max-width: 800px; 
+            background-color: #fff8dc; 
+            padding: 30px; 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 100px auto 30px; 
+            text-align: center;
+            font-size: 20px; 
+            position: relative;
+            z-index: 1; 
+        }
+        .footer {
+            background-color: #a47551; 
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 16px; 
+            margin-top: auto; 
+        }
+        section {
+            padding: 2em;
+            margin: 1em auto;
+            max-width: 800px;
+            background-color: #fff8dc; 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1{
+            color: #4b3832; 
+        }
+        h2, h3 {
+            color: #8B4513; 
+            text-align: center; 
+        }
+
+        h2 {
+            font-size: 28px; 
+            margin-top: 30px; 
+            margin-bottom: 10px; 
+        }
+
+        h3 {
+            font-size: 24px; 
+            margin-top: 20px; 
+            margin-bottom: 10px; 
+        }
+
+        ul {
+            list-style-type: disc; 
+            padding-left: 40px; 
+            text-align: left; 
+            margin: 0 auto; 
+        }
+
+        li {
+            margin-bottom: 10px; 
+        }
+
+        .requirements {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+        }
+        label {
+            font-size: 22px; 
+        }
+        input[type="radio"] {
+            transform: scale(1.5); 
+            margin-right: 10px; 
+        }
+        b {
+            display: block; 
+            margin-top: 10px; 
+        }
+        .submit-button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .submit-button {
+            background-color: #a47551; /* Darker shade of brown */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+<body>
+    
+<div class="header">
+    <h1>List of Requirements</h1>
+</div>
+<div class="container">
+    <h2>Job Specification</h2>
+    <p>Select your job type to see the requirements:</p>
+    <input type="radio" id="ofw" name="job" value="ofw" onclick="showRequirements(this)">
+    <label for="ofw">OFW</label><br>
+    <input type="radio" id="locally-employed" name="job" value="locally-employed" onclick="showRequirements(this)">
+    <label for="locally-employed">Locally Employed</label><br>
+    <input type="radio" id="business-owner" name="job" value="business-owner" onclick="showRequirements(this)">
+    <label for="business-owner">Business Owner</label><br>
+    
+    <div id="ofw-requirements" class="requirements">
+        <h2>OFW Requirements</h2>
+        <section>
+            <h3>(Any 2 Government-Issued Valid IDs)</h3>
+            <ul>
+                <b>Primary IDs</b>
+                <li>Philippine Passport</li>
+                <li>Driver's License</li>
+                <li>UMID</li>
+                <li>PRC ID</li>
+                <li>SSS ID (with birthdate)</li>
+                <li>Postal ID</li>
+                <li>National ID</li>
+                <b>Secondary IDs</b>
+                <li>TIN</li>
+                <li>Philhealth</li>
+                <li>Voter's ID</li>
+                <li>Barangay ID</li>
+                <li>SSS ID (without birthdate)</li>
+                <li>HDMF/Loyalty (Required, if HDMF financing)</li>
+                <li>PWD ID (w/ birthdate, address, photo, signature)</li>
+            </ul>
+            <p>*Photocopy of the required IDs need to have 3 specimen signatures next to it.<br>
+            **Submitted IDs must be 6 months before expiration.<br>
+            ***Additional ID: Company ID</p>
+        </section>
+        <section>
+            <h2>Proof of Income (All of the Following):</h2>
+            <ul>
+                <li>Latest Job Contract</li>
+                <li>COEC</li>
+                <li>3 months Pay slip</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Proof of Billing (At Least 1)</h2>
+            <ul>
+                <li>Electric Bill</li>
+                <li>Water Bill</li>
+                <li>Cable</li>
+                <li>Credit Card</li>
+                <li>Postpaid/Landline</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Must Be Submitted Within 8 to 30 Days:</h2>
+            <ul>
+                <li>Special Power of Attorney (Notarized or Consularized)</li>
+                <li>Three (3) pcs. 1x1 ID Picture</li>
+                <li>MRI ABOVE NEL FORM - For above 5M TCP</li>
+                <li>MANULIFE Application</li>
+                <li>Notarized Certificate of Employment and Compensation</li>
+                <li>Notarized or Authenticated: SPA on BIS, RA8 & CTC/SPA</li>
+                <li>Signed/Printed Contract To Sell</li>
+                <li>Filled-up and Signed Bank/HDMF Application Form</li>
+                <li>Company ID</li>
+                <li>Birth Certificate</li>
+                <li>Latest One Month Pay slip</li>
+                <li>Legal Separation Papers (if applicable)</li>
+                <li>Death Certificate (if applicable)</li>
+                <li>Marriage Contract (if applicable)</li>
+                <li>Personal Interview</li>
+                <li>Latest ITR 2316 (EMPLOYED)</li>
+                <li>CENOMAR</li>
+                <li>MID OR PAG-IBIG ID</li>
+                <li>TIN ID AND TIN NUMBER VERIFICATION</li>
+                <li>ESSA/LATEST PAG-IBIG RECEIPT</li>
+                <li>2 Latest Valid IDs of Spouse</li>
+            </ul>
+        </section>
+        </div>
+
+    <div id="locally-employed-requirements" class="requirements">
+        <h2>Locally Employed Requirements</h2>
+        <section>
+            <h3>(Any 2 Government-Issued Valid IDs)</h3>
+            <ul>
+                <b>Primary IDs</b>
+                <li>Philippine Passport</li>
+                <li>Driver's License</li>
+                <li>UMID</li>
+                <li>PRC ID</li>
+                <li>SSS ID (with birthdate)</li>
+                <li>Postal ID</li>
+                <li>National ID</li>
+                <b>Secondary IDs</b>
+                <li>TIN</li>
+                <li>Philhealth</li>
+                <li>Voter's ID</li>
+                <li>Barangay ID</li>
+                <li>SSS ID (without birthdate)</li>
+                <li>HDMF/Loyalty (Required, if HDMF financing)</li>
+                <li>PWD ID (w/ birthdate, address, photo, signature)</li>
+            </ul>
+            <p>*Photocopy of the required IDs need to have 3 specimen signatures next to it.<br>
+            **Submitted IDs must be 6 months before expiration.<br>
+            ***Additional ID: Company ID</p>
+        </section>
+        <section>
+            <h2>Proof of Income (All of the Following):</h2>
+            <ul>
+                <li>COE with Compensation</li>
+                <li>Latest 3 months Pay slip</li>
+                <li>ITR 2316</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Proof of Billing (At Least 1)</h2>
+            <ul>
+                <li>Electric Bill</li>
+                <li>Water Bill</li>
+                <li>Cable</li>
+                <li>Credit Card</li>
+                <li>Postpaid/Landline</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Must Be Submitted Within 8 to 30 Days:</h2>
+            <ul>
+                <li>Three (3) pcs. 1x1 ID Picture</li>
+                <li>MRI ABOVE NEL FORM - For above 5M TCP</li>
+                <li>MANULIFE Application</li>
+                <li>Signed/Printed Contract To Sell</li>
+                <li>Filled-up and Signed Bank/HDMF Application Form</li>
+                <li>Company ID</li>
+                <li>Birth Certificate</li>
+                <li>Latest one (1) month Pay slip</li>
+                <li>Legal Separation Papers (if applicable)</li>
+                <li>Death Certificate (if applicable)</li>
+                <li>Marriage Contract (if applicable)</li>
+                <li>Personal Interview</li>
+                <li>CENOMAR</li>
+                <li>TIN ID AND TIN NUMBER VERIFICATION</li>
+                <li>MID OR PAG-IBIG ID</li>
+                <li>ESSA/LATEST PAG-IBIG RECEIPT</li>
+                <li>2 Latest Valid IDs of Spouse</li>
+            </ul>
+        </section>
+        </div>
+
+    <div id="business-owner-requirements" class="requirements">
+        <h2>Business Owner Requirements</h2>
+        <section>
+            <h3>(Any 2 Government-Issued Valid IDs)</h3>
+            <ul>
+                <b>Primary IDs</b>
+                <li>Philippine Passport</li>
+                <li>Driver's License</li>
+                <li>UMID</li>
+                <li>PRC ID</li>
+                <li>SSS ID (with birthdate)</li>
+                <li>Postal ID</li>
+                <li>National ID</li>
+                <b>Secondary IDs</b>
+                <li>TIN</li>
+                <li>Philhealth</li>
+                <li>Voter's ID</li>
+                <li>Barangay ID</li>
+                <li>SSS ID (without birthdate)</li>
+                <li>HDMF/Loyalty (Required, if HDMF financing)</li>
+                <li>PWD ID (w/ birthdate, address, photo, signature)</li>
+            </ul>
+            <p>*Photocopy of the required IDs need to have 3 specimen signatures next to it.<br>
+            **Submitted IDs must be 6 months before expiration.<br>
+            ***Additional ID: Company ID</p>
+        </section>
+        <section>
+            <h2>Proof of Income (All of the Following):</h2>
+            <ul>
+                <li>Latest ITR 1701 with AFS</li>
+                <li>DTI and Business Permits</li>
+                <li>6 months Bank Statement</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Proof of Billing (At Least 1)</h2>
+            <ul>
+                <li>Electric Bill</li>
+                <li>Water Bill</li>
+                <li>Cable</li>
+                <li>Credit Card</li>
+                <li>Postpaid/Landline</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Must Be Submitted Within 8 to 30 Days:</h2>
+            <ul>
+                <li>Three (3) pcs. 1x1 ID Picture</li>
+                <li>MRI ABOVE NEL FORM - For above 5M TCP</li>
+                <li>MANULIFE Application</li>
+                <li>Latest Audited Financial Statement with ITR duly filed by BIR</li>
+                <li>Latest DTI Registration/Business Permit</li>
+                <li>Signed/Printed Contract To Sell</li>
+                <li>Filled-up and Signed Bank/HDMF Application Form</li>
+                <li>Birth Certificate</li>
+                <li>Latest One Month Pay slip</li>
+                <li>Legal Separation Papers (if applicable)</li>
+                <li>Death Certificate (if applicable)</li>
+                <li>Marriage Contract (if applicable)</li>
+                <li>Personal Interview</li>
+                <li>CENOMAR</li>
+                <li>TIN ID AND TIN NUMBER VERIFICATION</li>
+                <li>MID OR PAG-IBIG ID</li>
+                <li>ESSA/LATEST PAG-IBIG RECEIPT</li>
+                <li>2 Latest Valid IDs of Spouse</li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="submit-button-container">
+        <button href="submitReq.html" onclick="submitRequirements()"  class="submit-button">Submit Requirements</button>
+    </div>
+</div>
+<div class="footer">
+    &copy; 2024 Job Requirements. All rights reserved.
+</div>
+
+<script>
+    function showRequirements(checkbox) {
+        const jobTypes = ['ofw', 'locally-employed', 'business-owner'];
+        jobTypes.forEach(job => {
+            document.getElementById(job + '-requirements').style.display = 'none';
+        });
+        if (checkbox.checked) {
+            document.getElementById(checkbox.value + '-requirements').style.display = 'block';
+        }
+    }
+
+    function submitRequirements() {
+        const selectedJob = document.querySelector('input[name="job"]:checked');
+        if (selectedJob) {
+            const jobType = selectedJob.value;
+            window.location.href = `submitReq.html?job=${jobType}`;
+        } else {
+            alert('Please select a job type.');
+        }
+    }
+</script>
+
+</body>
+</html>
